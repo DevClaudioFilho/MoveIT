@@ -29,7 +29,6 @@ export default function Home(props:HomeProps) {
           <title>Inicio  move.It</title>
         </Head>
         <ExperienceBar />
-
         <CountdownProvider>
           <section>
             <div>
@@ -42,12 +41,12 @@ export default function Home(props:HomeProps) {
             </div>
           </section>
         </CountdownProvider>
-    </div>
+      </div>
     </ChallengesProvider>
 )
 }
 
-export const getSeverSideProps:GetServerSideProps= async(ctx) =>{
+export const getServerSideProps:GetServerSideProps = async(ctx) =>{
   const {level, currentExperience, challengesCompleted} = ctx.req.cookies;
 
   return{
